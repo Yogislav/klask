@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_scripts %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/datatables.min.css' %}">
+  <script type="text/javascript" src="{% static 'js/datatables.min.js' %}"></script>
+  <script>
+  $(document).ready(function () {
+    // DataTable initialization
+      $('#ranking-table').DataTable({
+        responsive: true,
+        searching: false,
+        ordering: false,
+        paging: false,
+        info: false,
+        columnDefs: [
+            { targets: 0, width: '1%' },
+            { targets: 1, width: '15%' },
+            { targets: 2, width: '2%' },
+        ],
+      });
+  });
+  </script>
+{% endblock %}
+
+{% block content %}
+  <div class="homepage">
+    <h2>Aktualny ranking</h2></br>
+    <div class="ranking">
+        <table id="ranking-table" class="cell-border compact hover stripe" cellspacing="0" width="25%">
+          <thead>
+            <tr>
+              <th>Pozycja</th>
+              <th>Zawodnik</th>
+              <th>ELO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in players %}
+              <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ p.last_name }} {{ p.first_name }}</td>
+                <td>{{ p.rating }}</td>
+              </tr>
+            {% endfor %}
+        </table>
+    </div>
+  </div>
+{% endblock %}

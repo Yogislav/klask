@@ -1,0 +1,7 @@
+Django==2.1.4
+django-debug-toolbar==1.11
+django-secure==1.0.1
+django-sslserver==0.20
+elo==0.1.1
+pytz==2018.7
+sqlparse==0.2.4

@@ -1,0 +1,151 @@
+body {
+  margin: 5px;
+}
+
+#banner {
+  margin-bottom: 5px;
+  flex: none;
+}
+  #banner a img {
+    height: 100px;
+}
+
+#wrapper {
+  clear: both;
+  min-height: 100%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  position: fixed;
+  background: white;
+  z-index: 500;
+  bottom: 0;
+  width: calc(100% - (2 * 5px));
+  height: 60px;
+  border-top: 1px solid silver;
+}
+#footer span {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#footer_admin {
+  float: right;
+}
+
+#content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 60px;
+}
+
+#menu .container-fluid {
+  padding-left: 0px;
+}
+#menu .container-fluid #bs-example-navbar-collapse-1 {
+  padding-left: 0px;
+}
+
+#menu .navbar {
+  margin-bottom: 5px !important;
+}
+  #menu .navbar .divider-vertical {
+    height: 50px;
+    margin: 0 9px;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #f2f2f2;
+}
+
+tr.clickable-row {
+  cursor: pointer !important;
+}
+
+table.scaled {
+  font-size: 20px;
+}
+
+.quick-login-box {
+  padding: 10px;
+  margin-top: 20px;
+  color: #337AB7;
+}
+  .quick-login-box div.quick-login {
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+  .quick-login-box div.quick-login:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+label.required::after {
+  color: red;
+  content: " *";
+}
+
+.btn-toolbar .btn {
+  margin-right: 5px;
+}
+
+.tooltip-inner {
+  max-width: 500px;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.selectedList li {
+  cursor: pointer;
+}
+
+.selectedList li:hover {
+  color: #3498db;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse .nav > .divider-vertical {
+    display: none;
+} }
+
+select[readonly].select2-hidden-accessible + .select2-container {
+  pointer-events: none;
+  touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection {
+  background: #eee;
+  box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear {
+  display: none;
+}
+
+.homepage ul > li > ul li {
+  list-style-type: none;
+}
+
+.homepage ul > li > ul li:before {
+  content: '\2714\A0';
+}
+
+table.dataTable {
+  margin: 0 0 !important;
+}
